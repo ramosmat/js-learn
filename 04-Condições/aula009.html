@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Velocidade</title>
+  </head>
+  <body>
+    <h1>Vamo ver se voce ta andando na linha memo</h1>
+
+    Velocidade do carro:
+    <input type="number" name="Velocidade" placeholder="km/h" id="textvel" />
+    <input type="button" value="Verificar" onclick="verificar()" />
+
+    <div id="msg"></div>
+
+    <script>
+      function verificar() {
+        var vel = document.querySelector("input#textvel");
+        var p = document.getElementById("msg");
+
+        vel = Number(vel.value);
+
+        p.innerHTML = `<p>
+            Sua velocidade atual é de <strong>${vel} km/h</strong>
+          </p>`;
+
+        if (vel >= 88) {
+          p.innerHTML += `<p>Você foi multado por estar <strong>${
+            vel - 80
+          }</strong> km/h acima do limite de velocidade!</p>`;
+        } else {
+          p.innerHTML += `<p>Você está dentro do limite de velocidade. Continue assim!</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

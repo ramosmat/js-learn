@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOMÃNNN 🎅</title>
+    <style>
+      body {
+        font: normal 20pt Arial;
+      }
+      script {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual o seu nome?");
+      var sal = window.prompt("Qual o seu salario?");
+
+      sal = Number.parseFloat(sal);
+
+      document.write(`<h1>Olá, ${nome.toUpperCase()}!</h1>`);
+      document.write(`Seu nome tem <strong>${nome.length}</strong> letras!>`);
+      document.write(`<br>`);
+
+      if (sal <= 2000) {
+        document.write(
+          `<br>Seu salário é de ${sal.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}, que tal se esforçar mais para continuar crescendo?`
+        );
+      } else if (sal > 2000 && sal <= 4500) {
+        document.write(
+          `<br>Seu salário é de ${sal.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}, contiue o bom trabalho!`
+        );
+      } else {
+        document.write(
+          `<br>Seu salário é de ${sal.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}, muito bom!!`
+        );
+      }
+    </script>
+  </body>
+</html>
