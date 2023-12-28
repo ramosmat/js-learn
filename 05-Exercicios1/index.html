@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: rgb(39, 122, 218);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #title {
+        font: 600 35px Arial;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      section {
+        background: white;
+        border-radius: 10px;
+        width: 80%;
+        height: 450px;
+        padding-left: 15px;
+        padding-top: 25px;
+        box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.61);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      #ano {
+        width: 200px;
+      }
+
+      #verify {
+        width: 90px;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #imagem {
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">Verificador de Idade</div>
+    <section>
+      <div>
+        Ano de Nascimento:
+        <input
+          id="ano"
+          type="number"
+          name="anonascimento"
+          placeholder="Insira seu ano de nascimento"
+        />
+      </div>
+      <form>
+        Sexo:
+        <input type="radio" name="sexo" value="Masculino" checked />
+        <label for="sexo">Masculino</label>
+        <input type="radio" name="sexo" value="Feminino" />
+        <label for="sexo">Feminino</label>
+      </form>
+
+      <input
+        id="verify"
+        type="button"
+        name="button"
+        value="Verificar"
+        onclick="verify()"
+      />
+
+      <div id="root"></div>
+      <img src="" alt="" />
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
