@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+
+    <style>
+      body {
+        background: rgb(44, 88, 233);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+      }
+      h1 {
+        color: white;
+      }
+      section {
+        background: white;
+        border-radius: 10px;
+        width: 80%;
+        max-height: 300px;
+        padding-left: 15px;
+        padding-top: 25px;
+        box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.61);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 20px;
+      }
+      #cont {
+        width: 60px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vamos contar</h1>
+    <section>
+      <div>
+        Início:
+        <input id="inicio" type="number" name="inicio" />
+      </div>
+
+      <div>
+        Fim:
+        <input id="fim" type="number" name="Fim" />
+      </div>
+
+      <div>
+        Passo:
+        <input id="passo" type="number" name="Passo" />
+      </div>
+
+      <input id="cont" type="button" value="Contar" onclick="contar()" />
+
+      <div id="root"></div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
